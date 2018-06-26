@@ -6,3 +6,4 @@ tmp
 jsdoc
 zip
 client/dist
+.DS_Store
