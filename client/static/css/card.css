@@ -1,0 +1,135 @@
+@import 'dm-icon/iconfont.css';
+
+.card {
+    display: grid;
+
+    grid-template:
+        'l title title' 1fr
+        'l hot hot' 32px
+        'l interact tag' 18px
+        / 110px 1fr auto;
+    grid-column-gap: 10px;
+
+    height: 110px;
+
+    text-decoration: none;
+    .l {
+        position: relative;
+
+        grid-area: l;
+        .pic img {
+            display: block;
+
+            width: 110px;
+            height: 110px;
+        }
+        .tag-ding {
+            font-size: 10px;
+            line-height: 14px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 28px;
+            height: 14px;
+
+            text-align: center;
+
+            color: #fff;
+            background: #d92728;
+        }
+    }
+    .title {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.4;
+
+        overflow: hidden;
+
+        grid-area: title;
+
+        margin: 0;
+
+        word-wrap: break-word;
+        word-break: break-word;
+
+        color: #3c3c3c;
+    }
+    .hot {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 32px;
+
+        overflow: hidden;
+
+        grid-area: hot;
+
+        margin: 0;
+
+        color: #de2d2d;
+        .origin {
+            font-size: 12px;
+
+            margin-left: 5px;
+
+            text-decoration: line-through;
+
+            color: #9e9e9e;
+        }
+    }
+    .interact {
+        font-size: 12px;
+        line-height: 18px;
+
+        overflow: hidden;
+
+        grid-area: interact;
+        .fav,
+        .comment,
+        .store {
+            display: inline-block;
+
+            margin-right: 10px;
+
+            vertical-align: middle;
+
+            color: #9e9e9e;
+            .dm-icon {
+                font-size: 11px;
+
+                margin-right: 3px;
+            }
+            > * {
+                display: inline-block;
+
+                vertical-align: middle;
+            }
+        }
+        .fav,
+        .comment {
+            white-space: nowrap;
+        }
+    }
+    .tag {
+        font-size: 11px;
+        line-height: 14px;
+
+        grid-area: tag;
+        align-self: center;
+
+        box-sizing: content-box;
+        height: 14px;
+        padding: 0 2px;
+
+        white-space: nowrap;
+
+        color: #db3132;
+        border: 1px solid #db3132;
+        border-radius: 2px;
+        &.tag-exclusive {
+            color: #0e6de1;
+            border-color: #0e6de1;
+        }
+    }
+}

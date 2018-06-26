@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head title="css grid example" }}
+<body>
+  <div class="center">
+    <div class="grid-info">
+      <div class="a">单元格</div>
+      <div class="b">网格区域</div>
+      <div class="c">c (w 1fr)</div>
+      <div class="d">d (h 1fr)</div>
+      <div class="e">e (h 1fr / w 1fr)</div>
+      <div class="f">f (w 1fr)</div>
+      <div class="g">g (w 1fr)</div>
+      <div class="h">h (h 40)</div>
+      <div class="i">i (h auto)</div>
+    </div>
+    <div class="grid-point">
+      <div class="column-gap">grid-column-gap</div>
+      <div class="row-gap">grid-row-gap</div>
+      <div class="x">x轴/主轴/行</div>
+      <div class="y">y轴/侧轴/列</div>
+      <div class="empty">. (empty cell)</div>
+    </div>
+    <div class="tool">
+      <button onclick="alignSelf()">align-self</button>
+      <button onclick="justifySelf()">justify-self</button>
+    </div>
+  </div>
+<script>
+  var h = document.querySelector('.h');
+  var i = 0;
+  var alignVals = ['stretch', 'start', 'end', 'center'];
+  function alignSelf() {
+    h.style.alignSelf = alignVals[i++];
+    if (i > 3) {
+      i = 0;
+    }
+  }
+  
+  var j = 0
+  var justifyVals = ['stretch', 'start', 'end', 'center']
+  function justifySelf() {
+    h.style.justifySelf = justifyVals[j++];
+    if (j > 3) {
+      j = 0;
+    }
+  }
+</script>
+</body>
+</html>

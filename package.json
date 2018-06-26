@@ -1,0 +1,11 @@
+{
+  "name": "css-grid-example",
+  "version": "1.0.0",
+  "description": "css grid example",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Jason Deng",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
